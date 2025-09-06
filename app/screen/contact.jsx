@@ -4,11 +4,15 @@ import { router } from 'expo-router'
 
 const contact = () => {
   return (
-    <View style={{flex:1 , justifyContent:'center', alignItems:'center'}}>
+    <View style={{ flex: 1, gap:10, justifyContent: 'center', alignItems: 'center' }}>
       <Button
-      onPress={()=>router.push('/screen/about')}
-       title='Go to About Page' 
-        />
+        onPress={() => router.push('/screen/about')}
+        title='Go to About Page'
+      />
+      <Button
+        onPress={() => router.back()}
+        title='Go Back'
+      />
     </View>
   )
 }

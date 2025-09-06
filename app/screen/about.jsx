@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { router } from 'expo-router'
 
 const about = () => {
   return (
-    <View>
-      <Text>about</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Button title='Go back' onPress={() => router.back()} />
     </View>
   )
 }

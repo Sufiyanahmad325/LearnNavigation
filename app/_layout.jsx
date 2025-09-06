@@ -24,14 +24,20 @@ export default function RootLayout() {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <Stack>
           <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
-          <Stack.Screen name="screen/contact"   options={{
-            header:()=>(
-              <View style={{height:'20%' , marginTop:'10%', width:'100%'}}>
-                <Text style={{fontSize:30}}>Contact</Text>
+          <Stack.Screen name="screen/contact" options={{
+            header: () => (
+              <View style={{ height: '20%', marginTop: '10%', width: '100%' }}>
+                <Text style={{ fontSize: 30 }}>Contact</Text>
               </View>
             )
-          }}/>
-          <Stack.Screen name="screen/about" />
+          }} />
+          <Stack.Screen name="screen/about" options={{
+            header: () => (
+              <View style={{ height: '20%', marginTop: '10%', width: '100%' }}>
+                <Text style={{ fontSize: 30 }}>About</Text>
+              </View>
+            )
+          }} />
           <Stack.Screen name="+not-found" />
         </Stack>
         <StatusBar style="auto" />
